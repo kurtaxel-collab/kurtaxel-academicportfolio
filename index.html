@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Academic portfolio of Kurt Axel D. Bustillo, BSIT student at National University Clark.">
+<title>Kurt Axel Bustillo — Academic File</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+  --paper:#f8f8f5;--white:#fff;--ink:#111;--blue:#315fba;--blue2:#dce7fb;
+  --red:#c9332e;--gray:#737373;--line:#d9d9d3;--tape:#e9e3ce;
+  --shadow:0 16px 50px rgba(0,0,0,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:#e9e9e5;color:var(--ink);font-family:"Space Grotesk",Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.paper{width:min(1160px,calc(100% - 32px));margin:26px auto;background:var(--paper);min-height:100vh;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid #deded8}
+.paper:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.23;background-image:radial-gradient(#777 0.45px,transparent .45px);background-size:7px 7px;mix-blend-mode:multiply}
+.topline{height:9px;background:linear-gradient(90deg,var(--blue) 0 34%,#111 34% 70%,var(--red) 70%)}
+.wrap{width:min(1000px,calc(100% - 52px));margin:auto;position:relative}
+header{position:sticky;top:0;z-index:20;background:rgba(248,248,245,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-family:"DM Mono",monospace;font-size:.78rem;font-weight:500;letter-spacing:.08em}
+.brand b{color:var(--blue)}
+.navlinks{display:flex;gap:19px;list-style:none;font-family:"DM Mono",monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em}
+.navlinks a{padding:8px 0;border-bottom:2px solid transparent}
+.navlinks a:hover,.navlinks a.active{border-color:var(--red);color:var(--blue)}
+.menu{display:none;background:transparent;border:1px solid var(--ink);padding:7px 11px;font-family:"DM Mono",monospace;font-size:.7rem}
+.hero{padding:80px 0 72px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center;min-height:590px}
+.micro{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--blue);font-weight:500}
+.hero h1{font-size:clamp(3rem,7vw,6.7rem);line-height:.91;letter-spacing:-.075em;margin:20px 0 18px;text-transform:uppercase}
+.hero h1 .blue{color:var(--blue);display:block}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:1.8px var(--ink)}
+.intro{max-width:560px;color:#4f4f4b;font-size:1.04rem}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:25px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border:1.5px solid var(--ink);font-family:"DM Mono",monospace;text-transform:uppercase;font-size:.7rem;letter-spacing:.04em;transition:.2s}
+.btn.primary{background:var(--blue);color:white;border-color:var(--blue)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.folder{position:relative;background:#fff;border:2px solid var(--ink);padding:25px 24px 23px;transform:rotate(2deg);box-shadow:9px 10px 0 var(--blue);max-width:360px;margin:15px auto}
+.folder:before{content:"STUDENT RECORD";position:absolute;top:-17px;left:22px;background:var(--blue);color:#fff;padding:5px 12px;font: .65rem "DM Mono",monospace;letter-spacing:.1em}
+.folder-stamp{position:absolute;right:-17px;top:35px;transform:rotate(10deg);border:3px solid var(--red);color:var(--red);font:700 1.05rem "DM Mono",monospace;padding:5px 9px}
+.initials{width:120px;height:120px;border-radius:50%;margin:9px auto 16px;background:var(--blue);color:white;display:grid;place-items:center;font-size:3rem;font-weight:700;letter-spacing:-.08em;border:5px solid #dce7fb;outline:2px solid var(--blue)}
+.folder h2{text-align:center;text-transform:uppercase;font-size:1.22rem;letter-spacing:-.03em}
+.folder .sub{text-align:center;font: .68rem "DM Mono",monospace;color:var(--gray);margin:4px 0 19px}
+.data{border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+.datum{padding:10px 7px;border-bottom:1px solid var(--line)}
+.datum:nth-child(odd){border-right:1px solid var(--line)}
+.datum small{display:block;font: .58rem "DM Mono",monospace;color:var(--gray);text-transform:uppercase}
+.datum b{font-size:.79rem}
+.handnote{font-family:"DM Mono",monospace;color:var(--red);font-size:.78rem;position:absolute;transform:rotate(-9deg)}
+.note-one{top:40px;right:2%;}.note-two{bottom:28px;left:44%;transform:rotate(5deg)}
+.arrow{position:absolute;width:100px;height:55px;right:2%;top:80px;opacity:.8}
+section{padding:76px 0;border-top:1px dashed #bdbdb5;position:relative}
+.sectionhead{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:28px}
+.sectionhead h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.06em;text-transform:uppercase;line-height:1}
+.sectionhead p{font: .65rem "DM Mono",monospace;color:var(--gray);text-transform:uppercase;text-align:right}
+.index{display:inline-block;color:var(--blue);font: .72rem "DM Mono",monospace;margin-bottom:9px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sheet{background:var(--white);border:1px solid var(--line);padding:25px;position:relative;box-shadow:4px 5px 0 rgba(0,0,0,.045)}
+.sheet h3{font-size:1.1rem;text-transform:uppercase;letter-spacing:-.025em;margin-bottom:11px}
+.sheet p{color:#555650;font-size:.94rem}
+.tape{position:absolute;top:-10px;left:30px;width:76px;height:20px;background:var(--tape);opacity:.8;transform:rotate(-4deg)}
+.redcircle{display:inline-block;border:2px solid var(--red);border-radius:50%;padding:2px 9px;transform:rotate(-4deg)}
+.blueunderline{background:linear-gradient(transparent 65%,#cbd9f6 65%)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+.tag{background:var(--blue2);border:1px solid #b9c9ec;color:#234b98;padding:5px 10px;font: .65rem "DM Mono",monospace;text-transform:uppercase}
+.timeline{display:grid;gap:0}
+.entry{display:grid;grid-template-columns:145px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:0}
+.entry .date{font: .68rem "DM Mono",monospace;color:var(--blue);text-transform:uppercase}
+.entry h3{font-size:1.12rem;text-transform:uppercase}
+.entry p{color:#5d5d58;font-size:.9rem;margin-top:5px}
+.achievement{background:#111;color:white;border:0;display:flex;align-items:center;gap:20px}
+.medal{width:65px;height:65px;flex:none;border:2px solid var(--blue);border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.7rem}
+.achievement p{color:#d1d1cd}
+.achievement .meta{font: .68rem "DM Mono",monospace;color:#a9c2ff;text-transform:uppercase;margin-top:7px}
+.project-placeholder{border:2px dashed #aeb6c6;background:rgba(220,231,251,.28);padding:40px 25px;text-align:center}
+.project-placeholder .big{font-size:2.5rem;color:var(--blue)}
+.project-placeholder h3{font-size:1.2rem;text-transform:uppercase;margin:8px 0}
+.project-placeholder p{color:#5c5c58;max-width:520px;margin:auto;font-size:.9rem}
+.contact{background:var(--blue);color:white;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:25px;position:relative;overflow:hidden}
+.contact:after{content:"CONTACT";position:absolute;right:-12px;bottom:-42px;font-size:6rem;font-weight:700;color:rgba(255,255,255,.08);letter-spacing:-.08em}
+.contact h2{font-size:2.2rem;text-transform:uppercase;letter-spacing:-.06em}
+.contact p{color:#e0e8fb;font-size:.9rem}
+.contact a{position:relative;z-index:1;color:white;text-decoration:underline;text-underline-offset:4px}
+.contact .btn{border-color:white;color:white;white-space:nowrap}
+footer{padding:25px 0 35px;font: .65rem "DM Mono",monospace;color:var(--gray);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(15px);transition:.6s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:760px){
+ .hero{grid-template-columns:1fr;padding:60px 0;gap:35px}.folder{width:min(100%,360px)}
+ .navlinks{display:none;position:absolute;top:71px;left:0;right:0;background:var(--paper);padding:17px 26px;border-bottom:1px solid var(--line);flex-direction:column}
+ .navlinks.open{display:flex}.menu{display:block}.grid2{grid-template-columns:1fr}
+ .handnote{display:none}.sectionhead{align-items:flex-start;flex-direction:column}.sectionhead p{text-align:left}
+ .contact{align-items:flex-start;flex-direction:column}.entry{grid-template-columns:1fr;gap:5px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="paper">
+<div class="topline"></div>
+<header>
+  <nav class="wrap nav">
+    <a class="brand" href="#home">FILE NO. <b>001 / KAB</b></a>
+    <button class="menu" id="menu" aria-expanded="false">INDEX +</button>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#about">Profile</a></li><li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Awards</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="hero" id="home" style="border:0">
+    <div class="reveal">
+      <div class="micro">Personal academic archive / 2026</div>
+      <h1><span class="blue">Kurt Axel</span><span class="outline">Bustillo.</span></h1>
+      <p class="intro">A first-year Information Technology student with a curious mind, a creative streak, and an interest in how technology can turn ideas into something real. This file documents my learning journey, interests, and academic milestones.</p>
+      <div class="actions">
+        <a class="btn primary" href="#about">Open my file ↘</a>
+        <a class="btn" href="#projects">View records +</a>
+      </div>
+    </div>
+    <aside class="folder reveal">
+      <div class="folder-stamp">NU CLARK</div>
+      <div class="initials">KB</div>
+      <h2>Kurt Axel D. Bustillo</h2>
+      <div class="sub">STUDENT IDENTIFICATION / BSIT</div>
+      <div class="data">
+        <div class="datum"><small>Course</small><b>BSIT</b></div>
+        <div class="datum"><small>Year Level</small><b>1st Year</b></div>
+        <div class="datum"><small>Section</small><b>ITE 103</b></div>
+        <div class="datum"><small>University</small><b>NU Clark</b></div>
+        <div class="datum"><small>Location</small><b>Mabalacat, Pampanga</b></div>
+        <div class="datum"><small>File Status</small><b>In Progress</b></div>
+      </div>
+    </aside>
+    <div class="handnote note-one">observe / learn / create ↗</div>
+    <div class="handnote note-two">keep exploring!</div>
+  </section>
+
+  <section id="about">
+    <div class="sectionhead reveal"><div><span class="index">01 — SUBJECT PROFILE</span><h2>About <span class="redcircle">Me</span></h2></div><p>Personal notes / introduction</p></div>
+    <div class="grid2">
+      <article class="sheet reveal"><span class="tape"></span><h3>Who I Am</h3>
+        <p>Hi! I'm Kurt Axel, a student who enjoys exploring ideas, learning new things, and finding creative ways to solve problems. Outside academics, I enjoy video games, music, and discovering interesting things about the world. I also have a soft spot for animals, especially cats. I like challenges that let me think, experiment, and look at things from a different perspective.</p>
+      </article>
+      <article class="sheet reveal"><span class="tape"></span><h3>My Background</h3>
+        <p>I am currently taking Bachelor of Science in Information Technology at National University Clark. My journey into IT is an opportunity to understand the digital tools and systems that shape everyday life. I come from Moncada Catholic School Inc. in Moncada, Tarlac, where I completed my previous schooling and earned High Honors. I am now building my foundation as an IT student, one lesson and one experience at a time.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sectionhead reveal"><div><span class="index">02 — ACADEMIC RECORD</span><h2>Education</h2></div><p>Learning history / institutions</p></div>
+    <div class="sheet reveal">
+      <div class="timeline">
+        <div class="entry"><div class="date">Present / 1st Year</div><div><h3>National University Clark</h3><div class="micro">Bachelor of Science in Information Technology · ITE 103</div><p>Mabalacat City, Pampanga. Currently developing my knowledge of information technology and strengthening my academic and problem-solving foundations.</p></div></div>
+        <div class="entry"><div class="date">Previous School</div><div><h3>Moncada Catholic School Inc.</h3><div class="micro">Poblacion 3, Moncada, Tarlac</div><p>Completed my previous level of education and received High Honors.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sectionhead reveal"><div><span class="index">03 — CURRENT TOOLKIT</span><h2>Skills & Strengths</h2></div><p>Abilities / areas to develop</p></div>
+    <div class="grid2">
+      <article class="sheet reveal"><h3>Personal Strengths</h3><p>I enjoy learning through exploration, approaching challenges with curiosity, and thinking creatively when solving problems.</p>
+        <div class="tags"><span class="tag">Problem-solving</span><span class="tag">Creative thinking</span><span class="tag">Curiosity</span><span class="tag">Adaptability</span><span class="tag">Teamwork</span><span class="tag">Communication</span></div>
+      </article>
+      <article class="sheet reveal"><h3>Learning Focus</h3><p>As a first-year BSIT student, I am continuing to build my technical foundation and discover which areas of IT I want to explore more deeply.</p>
+        <div class="tags"><span class="tag">IT Fundamentals</span><span class="tag">Digital Literacy</span><span class="tag">Logical Thinking</span><span class="tag">Technology</span><span class="tag">Independent Learning</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sectionhead reveal"><div><span class="index">04 — WORK FILES</span><h2>Academic Projects</h2></div><p>Assignments / outputs / experiments</p></div>
+    <div class="project-placeholder reveal">
+      <div class="big">＋</div>
+      <h3>Project records will be filed here</h3>
+      <p>This section is intentionally left open for future academic projects, activities, presentations, and practical outputs. Add each project when you are ready to showcase it.</p>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="sectionhead reveal"><div><span class="index">05 — RECOGNITION</span><h2>Achievements</h2></div><p>Academic distinctions</p></div>
+    <article class="sheet achievement reveal">
+      <div class="medal">★</div><div><h3>With High Honors</h3><div class="meta">Moncada Catholic School Inc. · Previous School</div><p>Recognized for academic achievement during my previous schooling. A milestone that reflects dedication, consistency, and the effort I put into my studies.</p></div>
+    </article>
+  </section>
+
+  <section id="contact">
+    <div class="sectionhead reveal"><div><span class="index">06 — COMMUNICATION CHANNEL</span><h2>Contact</h2></div><p>Let's connect / professional links</p></div>
+    <div class="contact reveal">
+      <div><h2>Get in touch.</h2><p>Thank you for taking the time to look through my academic file.</p>
+        <p style="margin-top:16px">Outlook: <a href="mailto:bustillokd@students.nu-clark.edu.ph">bustillokd@students.nu-clark.edu.ph</a></p>
+        <p>GitHub: <a href="https://github.com/bustillokurtaxel" target="_blank" rel="noopener">github.com/bustillokurtaxel</a></p>
+      </div>
+      <a class="btn" href="mailto:bustillokd@students.nu-clark.edu.ph">Send an email ↗</a>
+    </div>
+  </section>
+  <footer><span>© <span id="year"></span> KURT AXEL D. BUSTILLO</span><span>ACADEMIC FILE / BSIT · ITE 103</span></footer>
+</main>
+</div>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'INDEX −':'INDEX +';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='INDEX +';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
